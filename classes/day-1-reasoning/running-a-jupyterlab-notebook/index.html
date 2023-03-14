@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Anne Deslattes Mays, PhD" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Starting a jupyter lab notebook - Kids First & INCLUDE Elements of Style</title>
+    <title>Running a jupyterlab notebook - Kids First & INCLUDE Elements of Style</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Starting a jupyter lab notebook";
-        var mkdocs_page_input_path = "classes/day-1-reasoning/starting-a-jupyter-lab-notebook.md";
+        var mkdocs_page_name = "Running a jupyterlab notebook";
+        var mkdocs_page_input_path = "classes/day-1-reasoning/running-a-jupyterlab-notebook.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -87,9 +87,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>Starting a jupyter lab notebook</li>
+      <li>Running a jupyterlab notebook</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/adeslatt/Kids-First-INCLUDE-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/docs/classes/day-1-reasoning/starting-a-jupyter-lab-notebook.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/adeslatt/Kids-First-INCLUDE-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/docs/classes/day-1-reasoning/running-a-jupyterlab-notebook.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -97,38 +97,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p><img src="/../../img/JupyterLabLogoWithName.png" width=300 align="center"></p>
-<h1 id="starting-a-jupyterlab-notebook">Starting A JupyterLab Notebook</h1>
-<p>To start a <em><code>notebook</code></em>, we need a <em><code>project</code></em>.</p>
-<p>Please let <em><code>David</code></em> know your <em><code>username</code></em> in the <em><code>Zoom Chat</code></em> so you can be added to the <em><code>elements-of-style-kids-first</code></em> billing group.</p>
-<h2 id="create-a-new-project">Create a new project</h2>
-<p>We are at the login page, please select <img src="/../../img/CAVATICADashboardCreateAProjectButton.png" width=150> so we can create a new project.</p>
-<p>We need to select three pieces of important inforrmation.</p>
-<ol>
-<li>Enter a name, here I have used <em><code>Kids-First-INCLUDE-eos</code></em> - note you will see in the project URL how it uniquely is identified because it includes <em><code>your user id</code></em>.</li>
-</ol>
-<p><img src="/../../img/CAVATICACreateAProjectKidsFirstINCLUDEeos.png" width=150"></p>
-<ol>
-<li>
-<p>Select the appropriate Billing group.  For this course, give David your userid and you will be added so you can select <em><code>EoS-Include-KidsFirst</code></em>.</p>
-</li>
-<li>
-<p>Select <em><code>Allow network access</code></em></p>
-</li>
-</ol>
-<p>❗Important❗ be sure that you select <em><code>Allow network access</code></em></p>
-<p><img src="/../../img/CAVATICADashboardProjectsCreateAProject.png" width=650></p>
-<h2 id="start-a-new-analysis">Start a new Analysis</h2>
-<p>Next, within this new project, we will start an analysis.  To do this, select <em><code>Data Studio</code></em> and select <img src="/../../img/CAVATICADashboardCreateNewAnalysisButton.png" width=150> to create a new analysis.</p>
-<p>Name the analysis, here I used <em><code>Kids-First-INCLUDE-eos-analysis</code></em>.  Next select  <img src="/../../img/CAVATICADashboardDataStudioJupyterLabSelection.png" width=150>.</p>
-<p>Look over what you have entered </p>
-<p><img src="/../../img/KidsFirstINCLUDEEosAnalysis.png" width=650></p>
-<p>When satisfied that it is correct, press <img src="/../../img/CAVATICADashboardCreateNewAnalysisStartButton.png" width=50></p>
-<h2 id="confirm-it-is-starting">Confirm it is starting</h2>
-<p>Upon success, we will see it is starting, lets take a small <img src="/../../img/coffee.png" width=50>  break.</p>
-<p><img src="/../../img/KidsFirstINCLUDEEosAnalysisNotebookStarting.png" width=500></p>
-<h2 id="after-we-will-begin-with-the-command-line">After <img src="/../../img/coffee.png" width=50>  we will begin with the Command Line</h2>
-<p><a href="../day-1-reasoning/">Return to Day 1 Agenda</a></p>
+                <p><img src="/../../img/JupyterLabLogoWithName.png"  width="250"></p>
+<p>To begin, your screen should look like this:</p>
+<p><img src="/../../img/CAVATICAJupyterLabNotebookStartupScreen.png" width=650></p>
+<p>This is a <a href="https://jupyter.org">JupyterLab</a> environment.  Project Jupyter is a non-profit, open-source project, born out of the IPython Project in 2014 as it evolved to support interactive data science and scientific computing across all programming languages. Jupyter will always be 100% open-source software, free for all to use and released under the liberal terms of the modified BSD license. </p>
+<p><img src="/../../img/JupyterProjectAbout.png" width=650></p>
+<p>I encourage you to explore Project Jupyter and understand the directions they are going in and how they support open, transparent, re-purposeable and literate programming.  </p>
+<p>The JupyterLab Notebook environment supports at this point 40 languages, in kernels, providing a flexible way to achieve not only the ends of what we are trying to do with analysis, but in a well documented, clear and literate manner.</p>
+<p><img src="/../../img/JupyterLabTheClassicNotebookForLiterateProgramming.png" width=650></p>
+<p>Now that we are at the terminal window, we need to bring our lesson in hand -- and to do that, we are going to begin with <em><code>forking</code></em> our <em><code>GitHub</code></em> repository.</p>
+<h2 id="clone-a-github-repository">Clone a GitHub Repository</h2>
+<p>We are going to clone a GitHub repository - to do so navigate in your browser to <a href="https://github.com/NIH-NICHD/exampleVolcanoPlotNotebook">Example Volcano Plot Notebook</a></p>
+<p><img src="/../../img/exampleVolcanoPlotCodeClone.png" width = 500></p>
+<h2 id="copy-the-link-to-clone-the-repository">Copy the Link to Clone the repository</h2>
+<p>Next, navigate to the 🟦<code>Code</code> button on the right and select <code>HTTPS</code> and copy the link.</p>
+<h2 id="clone-the-repository-in-the-jupyterlab-terminal-window">Clone the repository in the Jupyterlab terminal window</h2>
+<p>Return to your CAVATICA Window and go back to your JupyterLab notebook.
+And select the <code>terminal window</code></p>
+<p><img src="/../../img/cloneExampleVolcanoPlotNotebook.png" width=500></p>
+<p>Now we want to clone the repository fork we made:</p>
+<p>At the prompt type:</p>
+<pre><code class="language-bash">git clone https://github.com/NIH-NICHD/exampleVolcanoPlotNotebook.git
+</code></pre>
+<p>Now let's use our <em><code>cd</code></em> command to change into the appropriate directory.</p>
+<pre><code class="language-bash">cd exampleVolcanoPlotNotebook
+</code></pre>
+<h2 id="recap">Recap</h2>
+<p>In this lesson:
+* We logged into CAVATICA
+* We started an interactive analysis with JupyterLab
+* We authenticated with GitHub
+* We executed and saw some Command Line Functions
+* We generated a Volcano Plot in a JupyterLab notebook running an <code>R</code> kernel</p>
+<h2 id="additional-resources">Additional resources:</h2>
+<ul>
+<li>CAVATICA documentation for the JupyterLab interface: https://docs.cavatica.org/docs/editor-quick-reference</li>
+<li>Official documentation from project JupyterLab: https://jupyterlab.readthedocs.io/en/stable/ </li>
+</ul>
               
             </div>
           </div><footer>
