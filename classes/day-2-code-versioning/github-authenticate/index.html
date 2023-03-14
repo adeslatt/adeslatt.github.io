@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Anne Deslattes Mays, PhD" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Creating a CAVATICA Account - Kids First & INCLUDE Elements of Style</title>
+    <title>Github authenticate - Kids First & INCLUDE Elements of Style</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Creating a CAVATICA Account";
-        var mkdocs_page_input_path = "classes/day-1-reasoning/creating-a-cavatica-account.md";
+        var mkdocs_page_name = "Github authenticate";
+        var mkdocs_page_input_path = "classes/day-2-code-versioning/github-authenticate.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -49,9 +49,9 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../pre-training/pre-training/">Pre-training</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../day-1-reasoning/">Day 1 - Reasoning</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../day-1-reasoning/day-1-reasoning/">Day 1 - Reasoning</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../day-2-code-versioning/day-2-code-versioning/">Day 2 - Code versioning</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../day-2-code-versioning/">Day 2 - Code versioning</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../day-3-containerization/day-3-containerization/">Day 3 - Containerization</a>
                   </li>
@@ -87,9 +87,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>Creating a CAVATICA Account</li>
+      <li>Github authenticate</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/adeslatt/Kids-First-INCLUDE-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/docs/classes/day-1-reasoning/creating-a-cavatica-account.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/adeslatt/Kids-First-INCLUDE-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/docs/classes/day-2-code-versioning/github-authenticate.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -97,18 +97,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="creating-a-cavatica-account">Creating a CAVATICA Account</h1>
-<p>Please create your account on CAVATICA</p>
-<p>Navigate to <a href="https://cavatica.sbgenomics.com">CAVATICA</a></p>
-<p>First screen you will see:</p>
-<p><img src="/../../img/CAVATICACreateAnAccountNumber1.png"></p>
-<p>You can either select <code>Create an account</code> or <code>Log in with eRA Commons</code>.</p>
-<p>If you select <code>Create an account</code>, you will see:</p>
-<p><img src="/../../img/CAVATICACreateAnAccountNumber2.png"></p>
-<p>Or if you select <code>Log in with eRACommons</code> you will see:</p>
-<p><img src="/../../img/CAVATICACreateAnAccountERACommonsNumber3.png"></p>
-<p>See further documentation:
-<a href="https://docs.cavatica.org/docs/sign-up-for-cavatica">CAVATICA Account Login Creation Documentation</a></p>
+                <h2 id="github-authentication">GitHub Authentication</h2>
+<p>To make a contribution to a GitHub repository, you need to authenticate.</p>
+<p>You can do this with the tool we installed <code>gh</code>.</p>
+<p>I didn't mention where I found this?   Yesterday I told you about <a href="anaconda.org/anaconda/repo">Anaconda Package Library</a>. There you can find an active contributor environment and the latest tools that can be used from the command line, in your containers and in your workflows.   It is as I mentioned an excellent place to educate and everyday working with these pacakges is easier and easier.</p>
+<p><img src="/../../img/Anaconda-conda-forge-gh.png" width=650></p>
+<p>Here we see that <code>gh</code> is the <strong>GitHub CLI</strong> where <strong>CLI</strong> stands for <em><strong>Command Line Interface</strong></em>, the application we now have been using for the last two days.</p>
+<h3 id="generating-a-github-authentication-token">Generating A GitHub Authentication Token</h3>
+<p>Before we <em><strong>authenticate</strong></em> with <em><strong>GitHub</strong></em> we need to generate a token that we will provide to <em><strong>GitHub</strong></em> to tell that application who we are.  This is a <em><strong>Personal Access Token</strong></em> your private secret key to prove who you are.</p>
+<p><em><strong>Step 1</strong></em> - Navigate to Settings, located just under your profile in the upper right hand corner:</p>
+<p><img src="/../../img/GitHubGeneratePersonalAccessToken1.png" width=650></p>
+<p><em><strong>Step 2</strong></em> - Navigate to the bottom to <code>&lt; &gt; Developer Settings</code> on the bottom left hand corner:</p>
+<p><img src="/../../img/GitHubGeneratePersonalAccessToken2.png" width=650></p>
+<p><em><strong>Step 3</strong></em> - Select <code>Personal access tokens</code> third option from the top on the left side:</p>
+<p><img src="/../../img/GitHubGeneratePersonalAccessToken3.png" width=650></p>
+<p><em><strong>Step 4</strong></em> - Select <code>Generate new token</code> on the upper right corner - put a name in the note I used <code>eos</code></p>
+<p><img src="/../../img/GitHubGeneratePersonalAccessToken4.png" width=650></p>
+<p><em><strong>Step 5</strong></em> - Select all of the options and select <code>Generate token</code></p>
+<p><img src="/../../img/GitHubGeneratePersonalAccessToken5.png" width=650></p>
+<p><em><strong>Step 6</strong></em> - Copy the token because as the note mentions - it will not be available again - but you can regenerate tokens now - so don't worry.</p>
+<p><img src="/../../img/GitHubGeneratePersonalAccessToken6.png"></p>
+<h3 id="now-we-can-authenticate-with-github">Now we can authenticate with GitHub</h3>
+<p>Once we have our token, we can now authenticate.</p>
+<p><em><strong>Step 1</strong></em> - <em>Type</em> <strong>gh auth login</strong> at the command line in the <strong>Terminal</strong> window</p>
+<p><img src="/../../img/JupyterLabNotebookTerminalghauthlogin.png" width=650></p>
+<p><em><strong>Step 2</strong></em> - Use arrow keeps and select <em>GitHub.com</em> (should be the default)</p>
+<p><img src="/../../img/JupyterLabNotebookTerminalSelectGitHub.png" width=650></p>
+<p><em><strong>Step 3</strong></em> - Select <em>HTTPS</em> for your _preferred protocol for git operations</p>
+<p><img src="/../../img/JupyterLabNotebookTerminalSelectHTTPS.png" width=650></p>
+<p><em><strong>Step 4</strong></em> - Confirm you wish to authenticate with your GitHub Credentials</p>
+<p><img src="/../../img/JupyterLabNotebookTerminalConfirmGitHub.png" width=650></p>
+<p><em><strong>Step 5</strong></em> - Use arrow keys to select <em>Paste an authentication token</em></p>
+<p><img src="/../../img/JupyterLabNotebookTerminalPasteAuthToken.png" width=650></p>
+<p><em><strong>Summary of all the steps</strong></em></p>
+<p><img src="/../../img/CAVATICAJupyterLabGHAuthLoginWithToken.png"></p>
+<h2 id="return-to-agenda"><a href="../day-2-code-versioning/">Return to Agenda</a></h2>
               
             </div>
           </div><footer>
