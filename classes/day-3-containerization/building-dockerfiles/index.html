@@ -98,12 +98,12 @@
             <div class="section" itemprop="articleBody">
               
                 <p>
-<img src="https://github.com/NIH-NICHD/Kids-First-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/assets/Moby-Logo.png" width=200>
+<img src="/../../img/Moby-Logo.png" width=200>
 </p>
 <p><b>
 </b></p>
 <h1 id="building-dockerfiles">Building Dockerfiles</h1>
-<p>We have now learned that we can control our environment with <a href="https://conda.io">conda</a>.   If you haven't done that lesson, it would be best for you to go through that lesson before beginning with this step.  The <a href="https://github.com/NIH-NICHD/Kids-First-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/classes/Creating-A-Conda-Environment/README.md#creating-a-conda-environment">Conda Lesson</a> will show you how to create a clean environment.</p>
+<p>We have now learned that we can control our environment with <a href="https://conda.io">conda</a>.   If you haven't done that lesson, it would be best for you to go through that lesson before beginning with this step.  The <a href="../creating-a-conda-environment/">Conda Lesson</a> will show you how to create a clean environment.</p>
 <p>Now we will show how to build an Docker image <a href="https://www.docker.com/">Docker</a> from a Dockerfile and we will use this in our workflow in three ways:  in a Nextflow workflow script, in a common workflow script and as an Application within CAVATICA.</p>
 <h2 id="what-is-a-docker-image-and-a-dockerfile">What is a Docker image and a Dockerfile</h2>
 <p>Docker images are created by using a so called <code>Dockerfile</code> i.e. a simple text file 
@@ -131,7 +131,7 @@ with the software packages required.    </p>
 </code></pre>
 <p>The <code>docker</code> application requires the exact filename <code>Dockerfile</code> when creating the image.</p>
 <p>In the google shell editor window this time, open the file named <code>Dockerfile</code></p>
-<p><img src="https://github.com/NIH-NICHD/Kids-First-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/assets/GoogleShellDockerFile1.png"></p>
+<p><img src="/../../img/GoogleShellDockerFile1.png"></p>
 <p>Copy the contents of the window below and paste it into your window.</p>
 <pre><code class="language-Dockerfile"># Full contents of Dockerfile
 
@@ -147,14 +147,14 @@ RUN conda env create --quiet --name ${ENV_NAME} --file /environment.yml &amp;&am
 ENV PATH /opt/conda/envs/${ENV_NAME}/bin:$PATH
 </code></pre>
 <p>After pasting in the window, your file should look like this:</p>
-<p><img src="https://github.com/NIH-NICHD/Kids-First-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/assets/GoogleShellDockerfile2.png"></p>
+<p><img src="/../../img/GoogleShellDockerfile2.png"></p>
 <p>The <code>docker</code> application understands the commands <code>FROM</code>, <code>LABEL</code>, <code>ARG ENV_NAME</code>, <code>COPY</code>, <code>RUN</code> and <code>ENV PATH</code>.<br />
 It also knows that <code>#</code> are comments and are for the human reader that is reading this file to understand what is happening within the file itself.</p>
 <p>The <code>base</code> image we are using for the <code>Dockerfile</code> is from <code>continuumio</code> the maker of our <code>miniconda3</code> which we installed earlier.   It is because of that environment that we do not need to install <code>conda</code>, it is part of the image.  We are using the function <code>COPY</code> to bring it into the image. </p>
 <p>We are adding to this <code>base</code> image our new function <code>fastqc</code>.</p>
 <p>You will see later that you can <code>COPY</code> your own custom scripts for use within the container.   This is the process of <code>containerization</code>.</p>
 <p>Notice as well we are prompted to look at our quotas, not an infinite resource but pretty good availability for a free asset.</p>
-<p><img src="https://github.com/NIH-NICHD/Kids-First-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/assets/GoogleShellQuotaInformation.png"></p>
+<p><img src="/../../img/GoogleShellQuotaInformation.png"></p>
 <p>Now we will inspect our <code>environment.yml</code> which is being used by <code>conda</code> to install our desired application.</p>
 <h2 id="creating-your-environmentyml-file">Creating your environment.yml File</h2>
 <p>Notice that this Docker file uses a file called <code>environment.yml</code>. </p>
@@ -185,7 +185,7 @@ dependencies:
 <pre><code class="language-bash">docker build -t fastqc .
 </code></pre>
 <p>Here the google shell asks to authorize it to complete the task.</p>
-<p><img src="https://github.com/NIH-NICHD/Kids-First-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/assets/GoogleShellDockerFileAuthorize.png"></p>
+<p><img src="/../../img/GoogleShellDockerFileAuthorize.png"></p>
 <p>When it completes, we can verify that the image has been created listing all available images with the following command:</p>
 <pre><code class="language-bash">docker images
 </code></pre>
@@ -214,7 +214,7 @@ dependencies:
 <pre><code class="language-bash">touch README.md
 </code></pre>
 <p>Open with the Code Editor (the Markdown Editor is experimental).  To do so, hover over the <em><code>README.md</code></em> file and click <em><code>Open With...</code></em> and select <em><code>Code Editor</code></em>.</p>
-<p><img src="https://github.com/NIH-NICHD/Kids-First-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/assets/GoogleShellSelectCodeEditor.png"></p>
+<p><img src="/../../img/GoogleShellSelectCodeEditor.png"></p>
 <p>Copy the contents here that explain what we have in this repository</p>
 <pre><code class="language-bash"># fastqc-docker
 Build a Container for fastqc from bioconda
@@ -248,7 +248,7 @@ docker run -it -v $PWD:$PWD -w $PWD fastqc fastqc -h
 </code></pre>
 <p>Now edit the file (I added the <em><code>\</code></em> so Markdown would ignore the data but it means we need to edit them out for the <em><code>README.md</code></em> to properly render on the repo.</p>
 <p>Please remove all the <em><code>\</code></em>'s the file will look like this:</p>
-<p><img src="https://github.com/NIH-NICHD/Kids-First-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/assets/GoogleShellFastqcREADMEfile.png" width=650></p>
+<p><img src="/../../img/GoogleShellFastqcREADMEfile.png" width=650></p>
 <h3 id="use-github-command-line-tool-gh-to-authenticate-before-we-push-create-our-repository">Use <em><code>GitHub</code></em> Command line tool <em><code>gh</code></em> to authenticate before we push create our repository.</h3>
 <p>The Google shell comes with the <em><code>gh</code></em> already installed.  So we just begin with authentication.</p>
 <pre><code class="language-bash">gh auth login
@@ -362,7 +362,7 @@ dependencies:
 <pre><code class="language-bash">touch README.md
 </code></pre>
 <p>Open with the Code Editor (the Markdown Editor is experimental).  To do so, hover over the <em><code>README.md</code></em> file and click <em><code>Open With...</code></em> and select <em><code>Code Editor</code></em>.</p>
-<p><img src="https://github.com/NIH-NICHD/Kids-First-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/assets/GoogleShellSelectCodeEditor.png"></p>
+<p><img src="/../../img/GoogleShellSelectCodeEditor.png"></p>
 <pre><code class="language-bash"># multiqc-docker
 Build a Container for multiqc from bioconda
 
@@ -396,7 +396,7 @@ docker run -it -v $PWD:$PWD -w $PWD multiqc multiqc -h
 <p>Now edit the file (I added the <em><code>\</code></em> so Markdown would ignore the data but it means we need to edit them out for the <em><code>README.md</code></em> to properly render on the repo.</p>
 <p>Please remove all the <em><code>\</code></em>'s the file will look like this:</p>
 <p>After pasting in the window, your file should look like this:</p>
-<p><img src="https://github.com/NIH-NICHD/Kids-First-Elements-of-Style-Workflow-Creation-Maintenance/blob/main/assets/GoogleShellMultiqcDockerfile.png" width=650></p>
+<p><img src="/../../img/GoogleShellMultiqcDockerfile.png" width=650></p>
 <p>We now type</p>
 <pre><code class="language-bash">git init -b main
 </code></pre>
@@ -441,8 +441,7 @@ docker run -it -v $PWD:$PWD -w $PWD multiqc multiqc -h
 <li>We inspected our images.</li>
 </ul>
 <p>Tomorrow, we will make our first workflow and show how to use these containers within our private repository on CAVATICA</p>
-<h2 id="return-to-the-agenda">Return to the Agenda</h2>
-<p><a href="https://github.com/NIH-NICHD/Kids-First-Elements-of-Style-Workflow-Creation-Maintenance#agenda-for-the-day-3-containerization-with-environment-control">Day 3 Agenda</a></p>
+<p><a href="../day-3-containerization/">Return to the Agenda</a></p>
               
             </div>
           </div><footer>
